@@ -1,6 +1,9 @@
 import clsx from "clsx";
 import { Element } from "react-scroll";
 import { useState } from "react";
+import {plans} from "../constants/index";
+import CountUp from "react-countup";
+
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -88,6 +91,15 @@ const Pricing = () => {
                     )}
                   >
                     {plan.title}
+                  </div>
+                  <div className="relative z-2 flex items-center justify-center">
+                    <div className={clsx("h-num flex items-start", index === 1 ? "text-p3" : "text-p4",)}>$ <CountUp 
+                    start={plan.priceMonthly}
+                    end={monthly ? plan.priceMonthly : plan.priceYearly }
+                    duration={0.4}
+                    useEasing={false}
+                    preserveValue
+                     /></div>
                   </div>
                 </div>
               </div>
