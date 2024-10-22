@@ -99,9 +99,14 @@ const Pricing = () => {
                     duration={0.4}
                     useEasing={false}
                     preserveValue
-                     /></div>
+                     />
+                     </div>
+                     <div className="small-1 relative top-3 ml-1 uppercase">
+                      / mo
+                     </div>
                   </div>
                 </div>
+                <div className={clsx("body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4", index === 1 && "border-b")}>{plan.caption}</div>
               </div>
             ))}
           </div>
