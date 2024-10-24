@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Element } from "react-scroll";
+import { Button, Element } from "react-scroll";
 import { useState } from "react";
 import {plans} from "../constants/index";
 import CountUp from "react-countup";
@@ -86,7 +86,7 @@ const Pricing = () => {
                 >
                   <div
                     className={clsx(
-                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercased",
+                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
                       index === 1 ? "border-p3 text-p3" : "border-p1 text-p1"
                     )}
                   >
@@ -122,6 +122,10 @@ const Pricing = () => {
                     ))}
                 </ul>
 
+                <div className="mt-10 flex w-full justify-center">
+                  <Button icon={plan.icon}>Get Started</Button>
+                </div>
+                  {index === 1 && <p className="small-compact mt-9 text-center text-p3 before:mx-2.5 before:content-['-'] after:mx-2.5 after:content-['-']">Limited time offer</p>}
               </div>
             ))}
           </div>
