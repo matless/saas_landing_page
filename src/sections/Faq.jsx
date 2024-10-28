@@ -13,6 +13,7 @@ const Faq = () => {
             <p className="body-1 max-lg:max-w-sm">
               You've got questions, we've got answers.
             </p>
+          <div className="faq-line_after w-0.5 h-full absolute left-[calc(50%-1px)] top-0 -z-1 bg-s2 "/>
           </div>
         </div>
       </Element>
