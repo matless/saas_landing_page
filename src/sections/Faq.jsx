@@ -1,5 +1,6 @@
 import { Element } from "react-scroll";
 import {faq} from '../constants/index'
+import FaqItem from "../components/FaqItem";
 
 const Faq = () => {
 
@@ -25,8 +26,8 @@ const Faq = () => {
             </div>
 
             <div className="relative flex-1 pt-24">
-              {faq.slice(0, halfLength).map((faq, index) => (
-                <div>{faq.question}</div>
+              {faq.slice(0, halfLength).map((item, index) => (
+                <FaqItem key={item.id} item={item} index={index} />
               ))}
             </div>
           </div>
