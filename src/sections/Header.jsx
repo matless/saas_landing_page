@@ -38,7 +38,7 @@ const Header = () => {
         hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]"
       )}
     >
-      ;
+      
       <div className="container flex h-14 items-center max-lg:px-5 ">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
           <img src="/images/xora.svg" width={155} height={55} alt="logo" />
